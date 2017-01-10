@@ -1,0 +1,136 @@
+\documentclass{ximera}
+      
+\title{Measures of the Location of the Data}
+      
+\begin{document}
+      
+\begin{abstract}
+      
+In this activity, we examine notions of Location of Data.
+
+Problems are based on the material found in section 2.1 \url{https://cnx.org/contents/MBiUQmmY@18.13:lad5IvLg@6/Measures-of-the-Location-of-th}
+      
+\end{abstract}
+      
+\maketitle
+ 
+ \begin{sageCell}
+L=[1,1,2,3,4,5, 1, 1] # Input the list of Data Here:
+
+L=sorted(L); L
+
+
+print('The mean is: '+`mean(L)`)
+print('The median (Q2) is: '+`median(L)`)
+print('The mode(s) is (are): '+`mode(L)`)
+print('The standard deviation is: '+`std(L)`)
+
+Z=(len(L))/2
+ZI=floor(Z)
+
+firsthalf=[]
+secondhalf=[]
+
+for i in range(ZI):
+    firsthalf.append(L[i])
+
+    
+for j in range(ZI):
+    secondhalf.append(L[len(L)-j-1])
+
+
+print('Q1 is: '+`median(firsthalf)`)
+print('Q3 is: '+`median(secondhalf)`)
+\end{sageCell} 
+     
+ 
+\begin{enumerate}
+\item Consider the following list of ages for Academy Award winners for best actor:
+$$18, 21, 22, 25, 26, 27, 29, 30, 31, 33, 36, 37, 41, 42, 47, 52, 55, 57, 58, 62, 64, 67, 69, 71, 72, 73, 74, 76, 77$$
+Find the 5-number summary:
+\begin{enumerate}
+\item Find the 5 number summary for this data:
+\begin{itemize}
+\item min:$\answer{18}$
+\item $Q_1:\answer{29.5}$
+\item median:$\answer{47}$
+\item $Q_3:\answer{68}$
+\item max:$\answer{77}$
+\end{itemize}
+\item Draw a Box and Whisker plot for the above data.
+\end{enumerate}
+
+\item For the following 13 real estate prices, calculate the IQR and determine if any prices are potential outliers. Prices are in dollars:
+$$389950, 230500, 158000, 479000, 639000, 114950, 5500000,$$ $$ 387000, 659000, 529000, 575000, 488800, 1095000$$
+\begin{enumerate}
+\item $IQR:\answer{340250}$
+\item Which of the following could be outliers?
+\begin{multipleChoice}
+\choice{389950}
+\choice{230500}
+\choice{158000}
+\choice{479000}
+\choice{639000}
+\choice{114950}
+\choice{5500000}
+\choice{387000}
+\choice{659000}
+\choice{529000}
+\choice{575000}
+\choice{488800}
+\choice[correct]{1095000}
+\choice{None of the above}
+\end{multipleChoice}
+
+\end{enumerate}
+
+\item Some students are surveyed and the amount of time each student spends per day exercising (in minutes) is: $$40,0,60,30,60,10,45,30,30,300,90,30,120,60,0,20$$
+\begin{enumerate}
+\item Find the 5 number summary for this data:
+\begin{itemize}
+\item min:$\answer{0}$
+\item $Q_1:\answer{20}$
+\item median:$\answer{40}$
+\item $Q_3:\answer{60}$
+\item max:$\answer{300}$
+\end{itemize}
+\item Find the $IQR=\answer{40}$.
+\end{enumerate}
+
+\item In the above problem \textbf{AFTER} removing the outliers:
+\begin{enumerate}
+\item Find a 5 number summary of the data:
+\begin{itemize}
+\item min:$\answer{0}$
+\item $Q_1:\answer{20}$
+\item median:$\answer{40}$
+\item $Q_3:\answer{60}$
+\item max:$\answer{120}$
+\end{itemize}
+\item What percent of students exercise for 1 hour or less? $\answer{75}$\%
+\end{enumerate}
+\item Suppose a data set had values $Q_1=30$, Med=$60$, $Q_3=75$.
+\begin{enumerate}
+\item What is the IQR of this data? $IQR=\answer{45}$.
+\item What are the cutoffs for potential outliers?  Left$=\answer{-37.5}$, Right=$\answer{142.5}$.
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+
+ 
+ 
+ 
+ 
+      
+
+
+
+
+
+
+\end{document}
