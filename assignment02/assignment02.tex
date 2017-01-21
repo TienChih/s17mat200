@@ -1,0 +1,132 @@
+\documentclass{ximera}
+      
+\title{Skewness and the Mean, Median, and Mode}
+      
+\begin{document}
+      
+\begin{abstract}
+      
+In this activity, we examine notions of skew.
+
+Problems are based on the material found in section 2.6 \url{https://cnx.org/contents/MBiUQmmY@18.13:JAT_IUGp@3/Skewness-and-the-Mean-Median-a}
+      
+\end{abstract}
+      
+\maketitle
+ 
+ \begin{sageCell}
+L=[1,1,2,3,4,5, 1, 1] # Input the list of Data Here:
+
+L=sorted(L); L
+
+
+print('The mean is: '+`mean(L)`)
+print('The median (Q2) is: '+`median(L)`)
+print('The mode(s) is (are): '+`mode(L)`)
+print('The standard deviation is: '+`std(L)`)
+
+Z=(len(L))/2
+ZI=floor(Z)
+
+firsthalf=[]
+secondhalf=[]
+
+for i in range(ZI):
+    firsthalf.append(L[i])
+
+    
+for j in range(ZI):
+    secondhalf.append(L[len(L)-j-1])
+
+
+print('Q1 is: '+`median(firsthalf)`)
+print('Q3 is: '+`median(secondhalf)`)
+\end{sageCell} 
+     
+Also try this link: \url{https://www.desmos.com/calculator/d49khihw5u}   
+     
+ 
+\begin{problem}
+For the following data set, find the mean, the median, and identify if there is possible left or right skew (round to four places if necessary):
+$$1,1,1,1,1,2,2,2,2,3,3,3,3,3,3,3,3,4,4,4,4,4,6,7$$
+
+\begin{enumerate}
+\item Mean: $\answer{2.9167}$
+\item Median: $\answer{3}$
+\item Is there any possible skew
+\begin{multipleChoice}
+\choice{No Skew}
+\choice[correct]{Possible Left Skew}
+\choice{Possible Right Skew}
+\end{multipleChoice}
+
+\end{enumerate}
+
+
+\end{problem}
+
+
+\begin{problem}
+For the following data set, find the mean, the median, and identify if there is possible left or right skew (round to four places if necessary) (These are final exam scores from a previous semester):
+$$24, 85, 87,80, 104, 69, 92, 57, 42, 87, 60, 97, 14, 52, 92, 84, 78, 59, 81, 87, 98, 92$$
+
+\begin{enumerate}
+\item Mean: $\answer{73.6818}$
+\item Median: $\answer{82.5}$
+\item Is there any possible skew
+\begin{multipleChoice}
+\choice{No Skew}
+\choice[correct]{Possible Left Skew}
+\choice{Possible Right Skew}
+\end{multipleChoice}
+
+\end{enumerate}
+
+
+\end{problem}
+
+
+ 
+ \begin{problem}
+For this class, find the mean and median quiz scores, and identify if there is possible left or right skew (round to four places if necessary):
+
+$$\begin{array}{|c|c|}
+\hline
+Number of Students & Quiz Score\\
+\hline
+\hline
+1 & 5\\
+4 & 6\\
+5 & 7\\
+5 & 8\\
+4 & 9\\
+3 & 10\\
+\hline
+\end{array}$$
+
+
+\begin{enumerate}
+\item Mean: $\answer{7.7272}$
+\item Median: $\answer{8}$
+\item Is there any possible skew
+\begin{multipleChoice}
+\choice{No Skew}
+\choice{Possible Left Skew}
+\choice[correct]{Possible Right Skew}
+\end{multipleChoice}
+
+\end{enumerate}
+
+
+\end{problem}
+
+ 
+ 
+      
+
+
+
+
+
+
+\end{document}
