@@ -1,0 +1,87 @@
+\documentclass{ximera}
+      
+\title{Problem 5}
+      
+\begin{document}
+      
+\begin{abstract}
+      
+In this activity, we are given an example problem and we try to identify what we know, what we're trying to do, and how to approach it.
+      
+\end{abstract}
+      
+\maketitle
+      
+ 
+Rats exposed to imaginarium have a 30\% chance of developing tumors, and those who don't have a 5\% chance of developing tumors.  If 80\% of the rats are exposed to imaginarium, how many rats will develop tumors?  Let $T$ denote ``tumors" and $I$ denote ``exposed to imaginarium".
+ 
+ \begin{enumerate}
+\item What do we know?
+
+\begin{selectAll}
+\choice{$P(T)$}
+\choice[correct]{$P(I)$}
+\choice{$P(T\ \text{and}\ I)$}
+\choice{$P(T\ \text{or}\ I)$}
+\choice[correct]{$P(T|I$)}
+\choice[correct]{$P(T|I^c$)}
+\choice{$P(I|T)$}
+\choice{$P(I|T^c$)}
+
+\end{selectAll}
+
+\item What are we trying to find?
+
+\begin{multipleChoice}
+\choice[correct]{$P(T)$}
+\choice{$P(I)$}
+\choice{$P(T^c)$}
+\choice{$P(I^c)$}
+\choice{$P(T\ \text{and}\ I)$}
+\choice{$P(T^c\ \text{and}\ I)$}
+\choice{$P(I\ \text{and}\ T^c)$}
+\choice{$P(I^c\ \text{and}\ T^c)$}
+
+\choice{$P(T\ \text{or}\ I)$}
+\choice{$P(T^c\ \text{or}\ I)$}
+\choice{$P(T\ \text{or}\ I^c)$}
+\choice{$P(T^c\ \text{or}\ I^c)$}
+
+\choice{$P(T|I)$}
+\choice{$P(T^c|I)$}
+\choice{$P(T|I^c)$}
+\choice{$P(T^c|I^c)$}
+
+\choice{$P(I|T)$}
+\choice{$P(I^c|T)$}
+\choice{$P(I|T^c)$}
+\choice{$P(I^c|T^c)$}
+
+\end{multipleChoice}
+
+\item The most relevant formula is:
+
+\begin{multipleChoice}
+\choice{$P(A\ \text{or}\ B)=P(A)+P(B)-P(A\ \text{and}\ B)$}
+\choice{$P(A|B)=\frac{P(A\ \text{and}\ B)}{P(B)}$}
+\choice[correct]{$P(B)=P(B|A)P(A)+P(B|A^c)(1-P(A))$}
+\end{multipleChoice}
+
+\item What is the actual answer?  The probability is (round to 4 decimal places if neccesary): $\answer{0.26}$
+
+\item[Bonus:] How many rats were either exposed to imaginarium or developed tumors: $\answer{0.82}$.
+
+\end{enumerate}
+
+ 
+ 
+ 
+ 
+      
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,86 @@
+\documentclass{ximera}
+      
+\title{Problem 2}
+      
+\begin{document}
+      
+\begin{abstract}
+      
+In this activity, we are given an example problem and we try to identify what we know, what we're trying to do, and how to approach it.
+      
+\end{abstract}
+      
+\maketitle
+      
+ 
+Suppose that 15\% of my students of mine come to office hours, 75\% pass, and 12\% come to office hours and pass.  If a student comes to office hours, what is the probability that they pass?  Let $O$ denote the event ``comes to office hours" and $S$ be the event ``student passes."  (I didn't want to use $P$ for passing for obvious reasons). 
+ 
+ \begin{enumerate}
+\item What do we know?
+
+\begin{selectAll}
+\choice[correct]{$P(O)$}
+\choice[correct]{$P(S)$}
+\choice[correct]{$P(O\ \text{and}\ S)$}
+\choice{$P(O\ \text{or}\ S)$}
+\choice{$P(O|S$)}
+\choice{$P(O|S^c$)}
+\choice{$P(S|O)$}
+\choice{$P(S|O^c)$}
+\end{selectAll}
+
+\item What are we trying to find?
+
+\begin{multipleChoice}
+\choice{$P(O)$}
+\choice{$P(S)$}
+\choice{$P(O^c)$}
+\choice{$P(S^c)$}
+\choice{$P(O\ \text{and}\ S)$}
+\choice{$P(O^c\ \text{and}\ S)$}
+\choice{$P(S\ \text{and}\ O^c)$}
+\choice{$P(S^c\ \text{and}\ O^c)$}
+
+\choice{$P(O\ \text{or}\ S)$}
+\choice{$P(O^c\ \text{or}\ S)$}
+\choice{$P(O\ \text{or}\ S^c)$}
+\choice{$P(O^c\ \text{or}\ S^c)$}
+
+\choice{$P(O|S)$}
+\choice{$P(O^c|S)$}
+\choice{$P(O|S^c)$}
+\choice{$P(O^c|S^c)$}
+
+\choice[correct]{$P(S|O)$}
+\choice{$P(S^c|O)$}
+\choice{$P(S|O^c)$}
+\choice{$P(S^c|O^c)$}
+
+\end{multipleChoice}
+
+\item The most relevant formula is:
+
+\begin{multipleChoice}
+\choice{$P(A\ \text{or}\ B)=P(A)+P(B)-P(A\ \text{and}\ B)$}
+\choice[correct]{$P(A|B)=\frac{P(A\ \text{and}\ B)}{P(B)}$}
+\choice{$P(B)=P(B|A)P(A)+P(B|A^c)(1-P(A))$}
+\end{multipleChoice}
+
+\item What is the actual answer?  The probability is (round to 4 decimal places if neccesary): $\answer{0.8}$
+
+\item[Bonus:] If someone didn't pass, what is the probability they didn't come to office hours?  The probability is (round to 4 decimal places if neccesary): $\answer{0.88}$.
+
+\end{enumerate}
+
+ 
+ 
+ 
+ 
+      
+
+
+
+
+
+
+\end{document}

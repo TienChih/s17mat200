@@ -1,0 +1,88 @@
+\documentclass{ximera}
+      
+\title{Problem 3}
+      
+\begin{document}
+      
+\begin{abstract}
+      
+In this activity, we are given an example problem and we try to identify what we know, what we're trying to do, and how to approach it.
+      
+\end{abstract}
+      
+\maketitle
+      
+ 
+Suppose that students had to vote for their favorite math professor, Dr.\ Al-Hasan or Dr. Chih.  Students with bad taste support Dr.\ Al-Hasan at an 80\% rate, and students without bad taste support Dr.\ Al-Hasan at a 20\% rate.  Suppose he has 56\% support.  How many students have bad taste?  Let $S$ denote ``supports Dr.\ Al-Hasan" and $T$ denote ``bad taste".
+
+ 
+ \begin{enumerate}
+\item What do we know?
+
+\begin{selectAll}
+\choice{$P(T)$}
+\choice[correct]{$P(S)$}
+\choice{$P(T\ \text{and}\ S)$}
+\choice{$P(T\ \text{or}\ S)$}
+\choice{$P(T|S$)}
+\choice{$P(T|S^c$)}
+\choice[correct]{$P(S|T)$}
+\choice[correct]{$P(S|T^c$)}
+
+\end{selectAll}
+
+\item What are we trying to find?
+
+\begin{multipleChoice}
+\choice[correct]{$P(T)$}
+\choice{$P(S)$}
+\choice{$P(T^c)$}
+\choice{$P(S^c)$}
+\choice{$P(T\ \text{and}\ S)$}
+\choice{$P(T^c\ \text{and}\ S)$}
+\choice{$P(S\ \text{and}\ T^c)$}
+\choice{$P(S^c\ \text{and}\ T^c)$}
+
+\choice{$P(T\ \text{or}\ S)$}
+\choice{$P(T^c\ \text{or}\ S)$}
+\choice{$P(T\ \text{or}\ S^c)$}
+\choice{$P(T^c\ \text{or}\ S^c)$}
+
+\choice{$P(T|S)$}
+\choice{$P(T^c|S)$}
+\choice{$P(T|S^c)$}
+\choice{$P(T^c|S^c)$}
+
+\choice{$P(S|T)$}
+\choice{$P(S^c|T)$}
+\choice{$P(S|T^c)$}
+\choice{$P(S^c|T^c)$}
+
+\end{multipleChoice}
+
+\item The most relevant formula is:
+
+\begin{multipleChoice}
+\choice{$P(A\ \text{or}\ B)=P(A)+P(B)-P(A\ \text{and}\ B)$}
+\choice{$P(A|B)=\frac{P(A\ \text{and}\ B)}{P(B)}$}
+\choice[correct]{$P(B)=P(B|A)P(A)+P(B|A^c)(1-P(A))$}
+\end{multipleChoice}
+
+\item What is the actual answer?  The probability is (round to 4 decimal places if neccesary): $\answer{0.6}$
+
+\item[Bonus:] If someone supported Dr.\ Chih, what is the probability that they have good taste?  The probability is (round to 4 decimal places if neccesary): $\answer{0.8}$.
+
+\end{enumerate}
+
+ 
+ 
+ 
+ 
+      
+
+
+
+
+
+
+\end{document}
