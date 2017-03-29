@@ -1,0 +1,73 @@
+\documentclass{ximera}
+      
+\title{Normal Distribution}
+      
+\begin{document}
+      
+\begin{abstract}
+      
+In this activity, we discuss the normal distribution.
+      
+\end{abstract}
+      
+\maketitle
+      
+ 
+\begin{enumerate}
+
+\item Consider the following graph:
+
+\begin{onlineOnly}
+$$\graph[xmin=-2,xmax=2,ymin=-0.5,ymax=1, panel]{N=e^{-x^2/2}/(2\pi)^{(0.5)}, P=\int_{z_1}^{z_2} N dx, a=-1, b=1, s=1, m=0, z_1=(a-m)/s, z_2=(b-m)/s, 0<y<N\left\{z_1<x<z_2\right\}}$$
+\end{onlineOnly}
+(This graph allows one to visualize and compute normally distributed probabilities.  Sliders $a$ and $b$ control the left and right endpoints, whereas $m, s$ denote the mean and standard deviation respectively.  Then $P$ is proportion of the normal curve between $a$ and $b$ with $z$-scores $z_1, z_2$ respectively.  A larger version of this graph may be found here: \url{https://www.desmos.com/calculator/y1pdds9uga}.)
+
+
+\begin{sageCell}
+from scipy.stats import norm
+
+normdist = norm()
+
+mean=120 # Put the mean of the distribution here
+std=30  # Put the standard deviation of the distribution here.
+P=0.4  # P is the value such that everything to the left of X is P
+
+X=normdist.ppf(P)*std+mean
+
+print('The area to the left of '+`X`); print(' on the normal curve with mean '+`mean`); print(' and standard deviation '+`std`); print(' is  '+`P`)
+\end{sageCell}
+(The above SageCell allows one to input a probability/area $P$ and it will find a value $X$ so that the probability/are to the \textbf{LEFT} of $X$ is $P$.)
+
+
+
+
+Suppose that Kyle Sumner takes his new boat out into the water to catch yellowfin tuna, whose weights are normally distributed with mean 120 pounds and standard deviation 30 pounds.  
+
+\begin{enumerate}
+\item If Kyle catches a yellowfin, what is the probability that he catches a tuna between 120 and 140 pounds? $\begin{prompt}
+    P(120\leq X\leq 140)= \answer{0.2475}
+  \end{prompt}$ (round to 4 decimal places)
+  \item  Find a value $X$ so that the probability that Kyle catches a fish at least $X$ pounds is 60\% $X=\answer{112.3996}$
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+
+
+
+
+
+ 
+ 
+ 
+ 
+      
+
+
+
+
+
+
+\end{document}
