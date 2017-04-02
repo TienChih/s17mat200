@@ -1,0 +1,115 @@
+\documentclass{ximera}
+      
+\title{Normal Distribution}
+      
+\begin{document}
+      
+\begin{abstract}
+      
+In this activity, we examine the normal distribution.
+
+\url{https://cnx.org/contents/MBiUQmmY@18.54:InewwncA@9/Using-the-Normal-Distribution}
+
+      
+\end{abstract}
+      
+\maketitle
+ 
+
+\begin{onlineOnly}
+$$\graph[xmin=-2,xmax=2,ymin=-0.5,ymax=1, panel]{N=e^{-x^2/2}/(2\pi)^{(0.5)}, P=\int_{z_1}^{z_2} N dx, a=-1, b=1, s=1, m=0, z_1=(a-m)/s, z_2=(b-m)/s, 0<y<N\left\{z_1<x<z_2\right\}}$$
+\end{onlineOnly}
+(This graph allows one to visualize and compute normally distributed probabilities.  Sliders $a$ and $b$ control the left and right endpoints, whereas $m, s$ denote the mean and standard deviation respectively.  Then $P$ is proportion of the normal curve between $a$ and $b$ with $z$-scores $z_1, z_2$ respectively.  A larger version of this graph may be found here: \url{https://www.desmos.com/calculator/y1pdds9uga}.)
+
+
+\begin{sageCell}
+from scipy.stats import norm
+
+normdist = norm()
+
+mean=120 # Put the mean of the distribution here
+std=30  # Put the standard deviation of the distribution here.
+P=0.4  # P is the value such that everything to the left of X is P
+
+X=normdist.ppf(P)*std+mean
+
+print('The area to the left of '+`X`); print(' on the normal curve with mean '+`mean`); print(' and standard deviation '+`std`); print(' is  '+`P`)
+\end{sageCell}
+(The above SageCell allows one to input a probability/area $P$ and it will find a value $X$ so that the probability/are to the \textbf{LEFT} of $X$ is $P$.)
+
+
+Round to 4 decimal places iff neccesary.
+
+
+\begin{problem}
+Suppose that the average time to run a marathon is 4 hours 20 minutes with standard deviation 1 hour. 
+
+ (\url{http://www.marathonguide.com/Features/Articles/2010RecapOverview.cfm})
+
+\begin{enumerate}
+\item What is the probability that it takes someone between 3 and 4 hours to run a marathon? $\answer{0.2782}$
+\item What is the probability it takes someone more than 6 hours to finish the marathon? $\answer{0.0478}$
+\item The top 10\% fastest runners get a special award at the end.  What is cutoff for achieving this award? $\answer{3.0518}$
+\end{enumerate}
+
+
+\end{problem}
+
+
+
+\begin{problem}
+Suppose that in 2016, the average SAT score was 1020 with standard deviation 194.
+
+ (\url{https://collegereadiness.collegeboard.org/pdf/understanding-sat-scores-2016.pdf})
+
+ \begin{enumerate}
+\item What is the probability that someone does better than a 1500?  $\answer{0.0067}$
+\item Find a value $k$ so that 50\% of the test takers will fall within $[1020-k, 1020+k]$.  $k=\answer{130.851}$
+\end{enumerate}
+
+ 
+\end{problem}
+
+
+
+\begin{problem}
+Suppose that in a town, the weight of adult male has mean 170 lb and standard deviation 15lb.
+
+\begin{enumerate}
+\item What is the probability that a random adult male weighs between 160 and 180 lb's? $\answer{0.495}$
+\item What is the probability that a random adult male weighs less than 150 lb?  $\answer{0.0912}$
+\item Find a value $k$ so that 20\% of the town weighs more than $k$.  $k=\answer{182.6243}$
+\end{enumerate}
+
+
+\end{problem}
+
+
+\begin{problem}
+Demitri and Ashley Plessas are expecting a baby on December 29th.  Demitri is also going to the joint math meetings on January 5th \url{http://jointmathematicsmeetings.org/jmm}.  Suppose that baby birth dates are normally distributed with a standard deviation of 5 days.  What is the probability that Demitri is a bad father?  $\answer={0.0808}$
+
+(Dante Plessas was born on Christmas)
+
+
+\end{problem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
