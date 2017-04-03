@@ -1,0 +1,70 @@
+\documentclass{ximera}
+      
+\title{CLT Demo}
+      
+\begin{document}
+      
+\begin{abstract}
+      
+A visualization of the Central Limit Theorem      
+\end{abstract}
+      
+\maketitle
+
+The following cell illustrates repeatedly (nr\_samples times) sampling a discrete distribution and recording the results.
+      
+ \begin{sageCell}
+P = [.4, .3, .2, .1] #Enter a Discrete Probability Distribution
+nr_samples = 10000. #Number of times we sample the mean (bar{X}) distribution  
+
+
+counts = [0] * (len(P))
+X = GeneralDiscreteDistribution(P)
+for j in range(nr_samples):
+    Z=X.get_random_element()
+    counts[Z] += 1
+
+    
+    
+    
+bar_chart(counts)
+
+ \end{sageCell}
+
+
+The following demonstrates repeatedly  (nr\_samples times) sampling the sum of $n$ values from a discrete distribution and recording the results
+
+ \begin{sageCell}
+P = [.4, .3, .2, .1] #Enter a Discrete Probability Distribution
+n=1  #Number of times distribution P is sampled
+nr_samples = 10000. #Number of times we sample the mean (bar{X}) distribution  
+
+
+counts = [0] * (n*len(P)-n+1)
+X = GeneralDiscreteDistribution(P)
+for i in range(nr_samples):
+    Z=0
+    for j in range(n):
+        Z+=X.get_random_element()
+    counts[Z] += 1
+
+    
+    
+    
+bar_chart(counts)
+
+ \end{sageCell}
+
+
+ 
+ 
+ 
+ 
+      
+
+
+
+
+
+
+\end{document}

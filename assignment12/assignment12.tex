@@ -1,0 +1,104 @@
+\documentclass{ximera}
+      
+\title{Central Limit Theorem}
+      
+\begin{document}
+      
+\begin{abstract}
+      
+In this activity, we examine the normal distribution.
+
+\url{https://cnx.org/contents/MBiUQmmY@18.54:w5Utw7bZ@9/The-Central-Limit-Theorem-for-}
+
+      
+\end{abstract}
+      
+\maketitle
+ 
+
+\begin{onlineOnly}
+$$\graph[xmin=-2,xmax=2,ymin=-0.5,ymax=1, panel]{N=e^{-x^2/2}/(2\pi)^{(0.5)}, P=\int_{z_1}^{z_2} N dx, a=-1, b=1, s=1, m=0, z_1=(a-m)/s, z_2=(b-m)/s, 0<y<N\left\{z_1<x<z_2\right\}}$$
+\end{onlineOnly}
+(This graph allows one to visualize and compute normally distributed probabilities.  Sliders $a$ and $b$ control the left and right endpoints, whereas $m, s$ denote the mean and standard deviation respectively.  Then $P$ is proportion of the normal curve between $a$ and $b$ with $z$-scores $z_1, z_2$ respectively.  A larger version of this graph may be found here: \url{https://www.desmos.com/calculator/y1pdds9uga}.)
+
+
+\begin{sageCell}
+from scipy.stats import norm
+
+normdist = norm()
+
+mean=120 # Put the mean of the distribution here
+std=30  # Put the standard deviation of the distribution here.
+P=0.4  # P is the value such that everything to the left of X is P
+
+X=normdist.ppf(P)*std+mean
+
+print('The area to the left of '+`X`); print(' on the normal curve with mean '+`mean`); print(' and standard deviation '+`std`); print(' is  '+`P`)
+\end{sageCell}
+(The above SageCell allows one to input a probability/area $P$ and it will find a value $X$ so that the probability/are to the \textbf{LEFT} of $X$ is $P$.)
+
+
+Round to 4 decimal places iff necessary.
+
+
+\begin{problem}
+Refer to The American Statistician (May 2001) study of female students who suffer from bulimia.  Each student completed a questionnaire from which a ``fear of negative evaluation" (FNE) score was produced. (The higher the score, the greater is the fear of negative evaluation.) Suppose the FNE scores of bulimic students have a distribution with mean $\mu=18$ and standard deviation $\sigma=5$. Now, consider a random sample of 45 female students with bulimia.
+\begin{enumerate}
+\item What is the probability that sample mean FNE score was more than 17.5?  $\answer{0.7488}$
+\item What is the probability that sample mean FNE score was between 18 and 18.5?  $\answer{0.2488}$
+\item Find a value $k$ so that 65\% of sample mean FNE scores would be more than $k$. $k=\answer{17.7128}$
+\end{enumerate}
+
+\end{problem}
+
+
+
+\begin{problem}
+ Refer to the Current Allergy NW \& Clinical Immunology (March 2004) study of allergic reactions of dental patients to local anesthetics. The study reported that the mean number of units (ampoules) of local anesthetics used per week by dentists was 79, with a standard deviation of 23.
+
+\begin{enumerate}
+\item If 25 dentists were surveyed, what is the probability that the sample mean \# of units of local anesthetics used weekly exceeds 85 units? $\answer{0.0961}$
+\item If 100 dentists were surveyed, what is the probability that the sample mean \# of units of local anesthetics used weekly exceeds 85 units? $\answer{0.0045}$
+\item Find a value $K$ so that if 36 dentists were surveyed, that 40\% of them would use between 75 and $K$ units of local anesthetics used weekly.  $K=\answer{79.4659}$
+\end{enumerate}
+
+
+\end{problem}
+
+
+\begin{problem}
+ Refer to the Aquatic Biology (Vol. 9, 2010) study of green sea turtles inhabiting the Grand Cayman South Sound lagoon. Research shows that the curved carapace (shell) lengths of these turtles has a distribution with mean $\mu = 50$ cm and standard deviation $\sigma = 10$ cm. In the study, $n = 76$ green sea turtles were captured from the lagoon; the mean shell length for the sample was $\bar{x} = 55.5$ cm. How likely is it to observe a sample mean of 55.5 cm or larger?  $\answer{8.1423}\times 10^{-7}$
+\end{problem}
+
+
+
+
+\begin{problem}
+According to the American Automobile Association (AAA), the average cost of a gallon of regular unleaded fuel at gas stations in August 2010 was \$2.78 (AAA Fuel Gauge Report). Assume that the standard deviation of such costs is \$0.15. 
+\begin{enumerate}
+\item What is the probability that given 100 surveyed gas stations, their avg gas price is between \$2.00 and \$2.75?  $\answer{0.0228}$
+\item Find $k$ so that the probability of surveying 50 gas stations and have the avg gas price be between \$2.78-$k$ and \$2.78+$k$ is 90\%.  $k=\answer{0.0149}$.
+\end{enumerate}
+
+\end{problem}
+
+
+\begin{problem}
+Suppose that Professor Chip gave a test, and the results are normally distributed with mean 75 and standard deviation 18.
+
+\begin{enumerate}
+\item What is the probability any random student got above an 80? $\answer{0.3906}$
+\item What is the probability that in a class of 20 students, the class average is over 80? $\answer{0.1071}$
+\end{enumerate}
+
+
+
+
+\end{problem}
+
+
+
+
+
+
+\end{document}
